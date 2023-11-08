@@ -1,0 +1,45 @@
+/* Add your CSS styles here */
+@import url('https://fonts.googleapis.com/css?family=Work Sans');
+
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.typing-container {
+    text-align: left;
+    width: 50%;
+}
+
+#typing-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#focus-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+}
+
+.blur {
+    filter: blur(8px); /* Initial blur effect */
+    transition: filter 5s ease; /* Slow blur transition */
+}
+
+rect, .bar:hover {
+  fill: black;
+}

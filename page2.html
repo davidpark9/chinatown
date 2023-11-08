@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChinaTown Project</title>
+    <link rel="stylesheet" type="text/css" href="page2-main.css">
+    <link rel="stylesheet" type="text/css" href="page2-sections.css">
+
+    <script>
+      function scrollToChinatownEconomy() {
+        const chinatownEconomySection = document.getElementById('sec-chinatown-economy');
+        if (chinatownEconomySection) {
+          chinatownEconomySection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
+
+    <script>
+        function scrollToChinatownTourism() {
+          const chinatownEconomySectionTwo = document.getElementById('sec-chinatown-tourism');
+          if (chinatownEconomySectionTwo) {
+            chinatownEconomySectionTwo.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+
+  </head>
+  <body>
+    <header>
+      <!-- menu navigation modal -->
+      <a href="#" class="logo">Menu</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToChinatownTourism()">Chinatown Tourism</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToChinatownEconomy()">Chinatown Economy</a></li>
+        <li><a href="#">Investment Infrastructure</a></li>
+        <li><a href="#">Community Engagement</a></li>
+      </ul>
+    </header>
+    
+<!-- THIS IS THE COVER PAGE -->
+    <section>
+      <img src="imgs/statue.jpg" id="stars">
+      <!-- <img src="imgs/Nothing.png" id="moon"> -->
+      <!-- <img src="imgs/mountains_behind.png" id="mountains_behind"> -->
+      <h2 id="text">ChinaTown</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="imgs/mountains_front.png" id="mountains_front">
+      <div class="content">
+    </section>
+    
+
+
+<!-- //FIRST SECTION -->
+
+
+<section class="sec2" id="sec-chinatown-tourism">
+  <div class="typing-container">
+    <div id="typing-text" id="typing-text"></div>
+</div>
+<script src="./script-sec1.js"></script>
+</section>
+
+
+
+
+<!-- //SECOND SECTION  -->
+
+<section class="sec" id="sec-chinatown-economy">
+    <h2 id="sec2title">NYC Chinatown Transportation<br> During and After COVID</h2>
+    <div id="chart">Transportation in Chinatown 2020-2021</div>
+</section>
+
+<!-- //THIRD SECTION -->
+
+
+
+
+
+
+    
+    <!-- This is how the images for the cover at the top are placed -->
+    <script type="text/javascript">
+      let moon = document.getElementById('moon');
+      let stars = document.getElementById('stars');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let mountains_front = document.getElementById('mountains_front');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let header = document.querySelector('header');
+      
+      window.addEventListener('scroll', function() {
+        var value = window.scrollY;
+  
+        header.style.top =-value * -0.5 + 'px';
+        mountains_front.style.top =-value * 0 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+      });
+    </script>
+    <script type="module" src="./transportation.js"></script>
+  </body>
+</html>
+
+<!-- DO NOT TOUCH -->
+<!-- mountains_behind.style.top =-value * -0.5 + 'px';-->
+<!-- moon.style.top = -value * -1.05 + 'px'; -->
+<!-- stars.style.left = value * 0.25 + 'px'; -->

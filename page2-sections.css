@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Work Sans');
+
+#sec2title {
+    padding:5%;
+   
+}
+
+  
+
+.sec, .sec2  {
+    position: relative;
+    min-height: 500px;
+    padding: 100px;
+    background: black;
+    
+    
+  }
+  
+  .sec, .sec2 h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .sec, .sec2 p {
+    font-size: 1.2em;
+    color: #fff;
+  }
+
+  
+/* Below is the css for the typing effect for section 1 */
+
+.typing-container {
+    text-align: left;
+    width: 50%;
+    color: white;
+  }
+  
+  
+  #typing-text {
+    transition: filter 0.5s ease-in-out;
+    font-size: 20px;
+  }
+  
+  #typing-text:focus {
+    filter: none;
+  }
+  
+  
+  
+  
+  

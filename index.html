@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Effect Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="typing-container">
+        <div id="typing-text"></div>
+        <button id="focus-button" class="blur">Start Walkthrough</button>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        const focusButton = document.getElementById('focus-button');
+        focusButton.addEventListener('click', function() {
+            window.location.href = 'page2.html'; 
+        });
+    </script>
+</body>
+</html>
