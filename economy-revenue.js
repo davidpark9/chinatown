@@ -21,11 +21,9 @@ const svg = d3
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// set the ranges
 const x = d3.scaleBand().range([0, width]).padding(0.1);
 const y = d3.scaleLinear().range([height, 0]);
 
-// Scale the range of the data in the domains
 x.domain(data.map((d) => d.transportMode));
 
 y.domain([
@@ -35,7 +33,6 @@ y.domain([
   }),
 ]);
 
-// append the rectangles for the bar chart
 svg
   .selectAll(".bar")
   .data(data)
