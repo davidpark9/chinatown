@@ -1,3 +1,6 @@
+// this is the code for the page 1 typing effect
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const text =
     "Given the tourism volume, investment in infrastructure, community engagement programs and overall economy within Chinatown, what factors have contributed to either positive or negative outcomes for the city?";
