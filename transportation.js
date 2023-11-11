@@ -1,16 +1,13 @@
-// step 1 Import the D3 module from a CDN
-import * as d3 from 'https://unpkg.com/d3?module'
-
+import * as d3 from "https://unpkg.com/d3?module";
 
 const data = [
-  {"date": "2020-03-01", "transportMode": "Bus", "count": 10000},
-  {"date": "2020-03-01", "transportMode": "Subway", "count": 50000},
-  {"date": "2020-03-01", "transportMode": "Taxi", "count": 20000},
-  {"date": "2021-03-01", "transportMode": "Bus", "count": 5000},
-  {"date": "2021-03-01", "transportMode": "Subway", "count": 25000},
-  {"date": "2021-03-01", "transportMode": "Taxi", "count": 10000}
-]
-
+  { date: "2020", transportMode: "Restaurants", count: 40000 },
+  { date: "2020", transportMode: "Retail", count: 35000 },
+  { date: "2020", transportMode: "Services", count: 25000 },
+  { date: "2021", transportMode: "Restaurants", count: 55000 },
+  { date: "2021", transportMode: "Retail", count: 30000 },
+  { date: "2021", transportMode: "Services", count: 15000 },
+];
 
 var margin = { top: 20, right: 20, bottom: 30, left: 40 },
   width = 700 - margin.left - margin.right,
@@ -25,23 +22,17 @@ const svg = d3
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // set the ranges
-const x = d3
-  .scaleBand()
-  .range([0, width])
-  .padding(0.1);
+const x = d3.scaleBand().range([0, width]).padding(0.1);
 const y = d3.scaleLinear().range([height, 0]);
 
-
 // Scale the range of the data in the domains
-x.domain(
-  data.map((d) => d.transportMode)
-);
+x.domain(data.map((d) => d.transportMode));
 
 y.domain([
   1000,
-  d3.max(data, function(d) {
+  d3.max(data, function (d) {
     return d.count;
-  })
+  }),
 ]);
 
 // append the rectangles for the bar chart
@@ -51,20 +42,30 @@ svg
   .enter()
   .append("rect")
   .attr("class", "bar")
-  .attr("x", function(d) {
+  .attr("x", function (d) {
     return x(d.transportMode);
   })
   .attr("width", x.bandwidth())
-  .attr("y", function(d) {
+  .attr("y", height)
+  .attr("height", 0)
+  .style("fill", function (d) {
+    if (d.date === "2021") {
+      return "red";
+    } else if (d.date === "2020") {
+      return "green";
+    } else {
+      return "gray";
+    }
+  })
+  .style("fill-opacity", 1)
+  .transition()
+  .duration(1000)
+  .attr("y", function (d) {
     return y(d.count);
   })
- .attr("height", function(d) {
-  return height - y(d.count);
-})
-.style('fill', 'yellow') 
-.style('fill-opacity', 0.5); 
-
-
+  .attr("height", function (d) {
+    return height - y(d.count);
+  });
 
 // add the x Axis
 svg
