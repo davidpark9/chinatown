@@ -32,8 +32,6 @@
     color: #fff;
   }
 
-  
-/* Below is the css for the typing effect for section 1 */
 
 .typing-container {
     text-align: left;
@@ -54,4 +52,419 @@
   
   
   
+  /*-----------------------------------------------tourism part----------------------------------------------- */
+/*-----------------------------------------------begin----------------------------------------------- */
+/*-----------------------------------------------tourism section's transition img and content----------------------------------------------- */
+.tourism-section {
+  position: relative;
+  height: 5000px; 
+  padding: 100px;
+  background: black;
+}
+
+#sec-chinatown-tourism.tourism-section {
+  padding: 100px 0;
+  min-height: 600px;
+}
+
+#sec-chinatown-tourism h1, #sec-chinatown-tourism h2 {
+  font-weight: bold;
+}
+
+#sec-chinatown-tourism p {
+  font-size: 1.2em;
+}
+
+
+#sec-chinatown-tourism .tourism-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* 调整为所需的高度，如100vh或其他 */
+}
+
+#sec-chinatown-tourism .tourism-background img {
+  width: 90%; /* 宽度保持为80% */
+  height: auto; /* 保持图片的纵横比 */
+  margin: auto; /* 通过自动外边距来居中图片 */
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+}
+
+
+.black-rectangle {
+  position: absolute;
+  top: 16.55%; /* Adjust as necessary */
+  left: 5%; /* Adjust as necessary */
+  width: 32%; /* Or any width you prefer */
+  height: 180px; /* Or any height you prefer */
+  background-color: rgba(0, 0, 0); /* Black with some opacity */
+  display: flex;
+  justify-content: center; /* Center the title horizontally */
+  align-items: center; /* Center the title vertically */
+  color: white; /* Text color */
+  text-align: center;
+  z-index: 3; /* Ensure it's above the image */
+}
+
+.black-rectangle h1 {
+  margin: 0; /* Remove default margin */
+  font-weight: bolder;
+  font-size: 70px;
+  position: absolute;
+  top: 12%; /* Adjust as necessary */
+  left: 0%; /* Adjust as necessary */
+  text-align: left;
+}
+
+.black-rectangle p {
+  position: absolute;
+  top: 130%; /* Adjust as necessary */
+  left: 0%; /* Adjust as necessary */
+  text-align: left;
+  width: 120%;
+  font-weight: bolder;
+}
+
+.black-rectangle p1 {
+  position: absolute;
+  top: 100%; /* Adjust as necessary */
+  left: 240%; /* Adjust as necessary */
+  text-align: left;
+  width: 120%;
+  font-weight:lighter;
+  font-style: italic;
+  font-size: 10px;
+  color: rgb(112, 112, 112);
+}
+
+
+#sec-chinatown-tourism .tourism-content {
+  position: relative; /* 相对定位而不是绝对定位，这样就不会与图片重叠 */
+  top: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+
+
+/*-----------------------------------------------chart1 with its content----------------------------------------------- */
+.scroll-container {
+margin-top: 50px; /* Space from the previous content */
+
+}
+
+.scroll-container h2 {
+  font-weight: bolder;
+  font-size: 45px;
+  color: #fff; /* Ensuring the color is visible on the background */
+  margin: 0 auto; /* Center the heading horizontally */
+  display: block; /* Make it a block element */
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  letter-spacing:-7px;
+}
+
+
+/* Animation1 */
+.char {
+  display: inline-block;
+  opacity: 0;
+}
+
+[data-scroll='in'] .char {
+  animation: swap-in 3s forwards;
+}
+
+@keyframes swap-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animation2 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initially hide the elements and set them up for the animation */
+.scroll-container p,
+.grey-rectangle p,
+.chart-content p,
+.content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Define the fade-in animation when the class is added */
+.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+
+.scroll-container p {
+  width: 600px;
+  height: 300px; /* Adjust as needed for your content */
+  color: white;
+  position: absolute; /* Position it within the scroll-container */
+  top: 27.5%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  z-index: 10;
+}
+
+
+.scroll-image img{
+  width: 63%;
+  height: auto;
+ position: absolute;
+ left: 30%;
+ top: 42%;
+}
+
+.scroll-image p1{
+  width: 45.5%;
+  color: #fff;
+  position: absolute;
+  top: 48.5%;
+  left: 6%;
+  transform: rotate(90deg); 
+  font-weight:lighter;
+font-style: italic;
+font-size: 10px;
+color: rgb(112, 112, 112);
+  }
+
+
+/*-----------------------------------------------circles with timeline and its content----------------------------------------------- */
+.line { 
+  border-bottom: 5px solid;
+  color:rgb(181, 181, 181); 
+  width: 70%; 
+  position: absolute;
+  top: 55.8%;
+  align-items: center;
+  z-index: 1.5;
+} 
+
+.circle {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 55.5%;
+
+
+
+}
+
+.circle.enlarged {
+  transform: scale(2);
+  transition: transform 0.3s ease; /* 平滑过渡效果 */
+}
+
+
+
+.circle1 {
+  position: absolute;
+  left: 15%;
+}
+
+.text-circle1{
+  position: absolute;
+  top: 54.5%;
+  left: 14.5%;
+  color: white;
+  font-size: larger;
+}
+
+.circle2 {
+  position: absolute;
+  left: 32.5%;
+
+}
+
+.text-circle2{
+  position: absolute;
+  top: 54.5%;
+  left: 32%;
+  color: white;
+  font-size: larger;
+}
+
+.circle3 {
+  position: absolute;
+  left: 50%;
+
+}
+
+.text-circle3{
+  position: absolute;
+  top: 54.5%;
+  left: 49.5%;
+  color: white;
+  font-size: larger;
+}
+
+.circle4 {
+  position: absolute;
+  left: 67.5%;
+
+}
+
+.text-circle4{
+  position: absolute;
+  top: 54.5%;
+  left: 67%;
+  color: white;
+  font-size: larger;
+}
+
+
+.circle5 {
+  position: absolute;
+  left: 85%;
+
+}
+
+.text-circle5{
+  position: absolute;
+  top: 54.5%;
+  left: 84.5%;
+  color: white;
+  font-size: larger;
+}
+
+
+.content {
+  width: 73%;
+  color: #fff;
+  position: absolute;
+  top: 57.5%;
+  left: 15%;
+  font-size: 20px;
+}
+
+.content-button{
+  cursor: pointer;
+  width: 70%;
+  color: #fff;
+  position: absolute;
+  top: 60%;
+  left: 84%;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.content-button.back {
+  display: none; /* 默认隐藏 Back 按钮 */
+  width: 70%;
+  color: #fff;
+  position: absolute;
+  top: 60%;
+  left: 84%;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+
+
+
+
+ /*-----------------------------------------------chart2 with its content----------------------------------------------- */
+  .chart-container {
+    position: relative; /* 这将成为SVG的定位上下文 */
+    height: 500px; /* 应该和SVG的高度一致 */
+    width: 750px; /* 应该和SVG的宽度一致 */
+    margin: auto; /* 居中显示 */
+    position: absolute; /* 或者 'relative'，取决于您的布局需求 */
+    top: 47.5%; /* 距离包含它的容器顶部的距离，根据需要调整 */
+  left: 10%; /* 距离包含它的容器左侧的距离，根据需要调整 */
+  }
+
+  svg {
+    display: block;
+    background: #000000;
+
+      /* 将图片定位在页面上的特定位置，根据需要调整这些值 */
+  position: absolute; /* 或者 'relative'，取决于您的布局需求 */
+  top: 250%; /* 距离包含它的容器顶部的距离，根据需要调整 */
+  left: 10%; /* 距离包含它的容器左侧的距离，根据需要调整 */
+  }
+
+  .chart-content p{
+  width: 50%;
+  color: #fff;
+  position: absolute;
+  top: 63%;
+  left: 15%;
+  font-size: 20px;
+  }
+
+  .chart-content p1{
+    width: 45.5%;
+    color:gray; /* Black with some opacity */
+    position: absolute;
+    top: 69.5%;
+    left: 40%;
+    transform: rotate(-90deg); /* 逆时针旋转90度 */
+    font-weight:lighter;
+  font-style: italic;
+  font-size: 10px;
+    }
   
+
+/* -----------------------------------------------grey conclusion-----------------------------------------------*/
+    .grey-rectangle {
+      width: 90%; /* Adjust the width as needed */
+      height: 190px; /* Set the height to fit your content */
+      margin: auto; /* Centers the rectangle in its parent if the parent is flex or has a specified width */
+      position: absolute;
+      top: 79%; /* Adjust the position as needed */
+      left: 5%;
+      background-color: #2E2E2E; /* Dark grey background */
+      display: flex;
+      justify-content: center; /* Horizontally center content */
+      align-items: center; /* Vertically center content */
+    }
+    
+    .grey-rectangle p {
+      color: white; /* White text color */
+      padding: 40px;
+    }
+    
+    .grey-rectangle p1 {
+      width:100%;
+      color:gray;
+      position: absolute;
+      top: 180%; /* Adjust the position as needed */
+      left: 0%;
+      font-size: 15px;
+      font-weight:lighter;
+      font-style: italic;
+    }
+
+    /*-----------------------------------------------tourism part----------------------------------------------- */
+/*-----------------------------------------------end----------------------------------------------- */
