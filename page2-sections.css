@@ -2,14 +2,15 @@
 
 /* PLEASE make sure to write css for the sections individually here. Do not add it to the the page2-main.css file! */
 
+#chart {
+  font-size: 20px;
+}
 
 
 #sec2title {
     padding:1%;
-   
+   font-size: 75px;
 }
-
-  
 
 .sec, .sec2, .sec3  {
     position: relative;
@@ -26,8 +27,8 @@
     color: #fff;
   }
   
-  .sec, .sec2,.sec3 p {
-    font-size: 1.2em;
+   p {
+    font-size: .5em;
     color: #fff;
   }
 

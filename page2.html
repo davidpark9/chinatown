@@ -49,7 +49,10 @@
       <img src="imgs/statue.jpg" id="stars">
       <!-- <img src="imgs/Nothing.png" id="moon"> -->
       <!-- <img src="imgs/mountains_behind.png" id="mountains_behind"> -->
-      <h2 id="text">ChinaTown</h2>
+      <!-- <h2 id="text">ChinaTown</h2> -->
+      <img id="text" src="imgs/train.png" alt="Train Subway">
+
+
       <a href="#sec" id="btn">Explore</a>
       <img src="imgs/mountains_front.png" id="mountains_front">
       <div class="content">
@@ -69,32 +72,27 @@
     </section>
       
 
-    
-
-
-
-
-
-
 <!-- //SECOND SECTION  David's part -->
 
 <section class="sec" id="sec-chinatown-economy">
     <h2 id="sec2title">Business Revenue per Type of Business</h2>
-    <div id="chart">Revenue for Businesses</div>
+    <div id="chart" width="20" height="10">Revenue for Businesses</div>
 </section>
 
 <!-- //THIRD SECTION David's part -->
 
 <section class="sec3" id="sec-chinatown-economy2">
+
   <h2 id="sec2title">NYC Chinatown businesses over time </h2>
-  <canvas id="progressiveLineChart" width="40" height="30"></canvas>
+
+  <canvas id="progressiveLineChart" width="50" height="40"></canvas>
   <script src="economyVisualization2.js"></script>
 
 </section>
 
 
 <!-- FOURTH SECTION image transition -->
-fsf
+
 
 <!-- FIFTH SECTION Renee's Placement-->
 
@@ -123,26 +121,28 @@ fsf
 
 
     
-    <!-- This is how the images for the cover at the top are placed -->
-    <script type="text/javascript">
-      let moon = document.getElementById('moon');
-      let stars = document.getElementById('stars');
-      let mountains_behind = document.getElementById('mountains_behind');
-      let mountains_front = document.getElementById('mountains_front');
-      let text = document.getElementById('text');
-      let btn = document.getElementById('btn');
-      let header = document.querySelector('header');
-      
-      window.addEventListener('scroll', function() {
-        var value = window.scrollY;
+<script type="text/javascript">
+  let moon = document.getElementById('moon');
+  let stars = document.getElementById('stars');
+  let mountains_behind = document.getElementById('mountains_behind');
+  let mountains_front = document.getElementById('mountains_front');
+  let trainImage = document.getElementById('text'); // Update to the ID of your train image
+  let btn = document.getElementById('btn');
+  let header = document.querySelector('header');
   
-        header.style.top =-value * -0.5 + 'px';
-        mountains_front.style.top =-value * 0 + 'px';
-        text.style.marginTop = value * 1.5 + 'px';
-        btn.style.marginTop = value * 1.5 + 'px';
-        text.style.marginRight = value * 4 + 'px';
-      });
-    </script>
+  window.addEventListener('scroll', function() {
+    var value = window.scrollY;
+
+    header.style.top = -value * -0.5 + 'px';
+    mountains_front.style.top = -value * 0 + 'px';
+    trainImage.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+    trainImage.style.marginRight = value * 4 + 'px';
+    trainImage.style.transform = 'translateY(' + value * 0.5 + 'px)';
+  });
+</script>
+
+    
     <script type="module" src="./economy-revenue.js"></script>
   </body>
 </html>
