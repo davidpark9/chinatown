@@ -18,10 +18,19 @@
     </script>
 
     <script>
-        function scrollToWrittenEssay() {
-          const chinatownEconomySectionTwo = document.getElementById('sec-chinatown-tourism');
-          if (chinatownEconomySectionTwo) {
-            chinatownEconomySectionTwo.scrollIntoView({ behavior: 'smooth' });
+        function scrollToIntro() {
+          const chinatownIntroSection = document.getElementById('sec-chinatown-intro');
+          if (chinatownIntroSection) {
+            chinatownIntroSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+
+       <script>
+        function scrollToChinatownTourism() {
+          const chinatownTourismSection = document.getElementById('sec-chinatown-tourism');
+          if (chinatownTourismSection) {
+            chinatownTourismSection.scrollIntoView({ behavior: 'smooth' });
           }
         }
       </script>
@@ -33,7 +42,8 @@
       <a href="#" class="logo">Menu</a>
       <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="javascript:void(0);" onclick="scrollToWrittenEssay()">Written Essay</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToIntro()">Introduction</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToChinatownTourism()">Chinatown Tourism</a></li>
         <li><a href="javascript:void(0);" onclick="scrollToChinatownEconomy()">Chinatown Economy</a></li>
         <li><a href="#">Investment Infrastructure</a></li>
         <li><a href="#">Community Engagement</a></li>
@@ -53,15 +63,149 @@
     
 
 
-<!-- //FIRST SECTION -->
-
-
-<section class="sec2" id="sec-chinatown-tourism">
+<!-- //INTRODUCTION -->
+<section class="sec2" id="sec-chinatown-intro">
   <div class="typing-container">
     <div id="typing-text" id="typing-text"></div>
 </div>
 <script src="./script-sec1.js"></script>
 </section>
+
+
+<!-----------------------------------------------tourism part----------------------------------------------->
+<!-----------------------------------------------begin----------------------------------------------->
+<!-- //FIRST SECTION -->
+<section class="tourism-section" id="sec-chinatown-tourism">
+  <!-- Background image container -->
+  <div class="tourism-background">
+    <img src="imgs/tourism-bk.png" alt="Chinatown Tourism">
+  </div>
+
+  <!-- Black rectangle overlay with title -->
+  <div class="black-rectangle">
+    <h1>CHINATOWN <br>TOURISM</h1>
+    <p>Discover the resilience and dynamic spirit of Chinatown's tourism through its evolution and renewal.</p>
+    <p1>The image is created by artist Zhi Yang</p1>
+  </div>
+
+</div>
+
+<!-- The container for the text and image -->
+<div class="scroll-container" id="scroll-container">
+  <h2>
+    <span class="char">E</span>
+    <span class="char">v</span>
+    <span class="char">o</span>
+    <span class="char">l</span>
+    <span class="char">v</span>
+    <span class="char">i</span>
+    <span class="char">n</span>
+    <span class="char">g</span>
+    <span class="char"> </span> <!-- Space character -->
+    <span class="char">T</span>
+    <span class="char">o</span>
+    <span class="char">u</span>
+    <span class="char">r</span>
+    <span class="char">i</span>
+    <span class="char">s</span>
+    <span class="char">m</span>
+    <span class="char"> </span> <!-- Space character -->
+    <span class="char">i</span>
+    <span class="char">n</span>
+    <br> <!-- Line break -->
+    <span class="char">C</span>
+    <span class="char">h</span>
+    <span class="char">i</span>
+    <span class="char">n</span>
+    <span class="char">a</span>
+    <span class="char">t</span>
+    <span class="char">o</span>
+    <span class="char">w</span>
+    <span class="char">n</span>
+  </h2>
+    <p>
+      Tourism, a critical aspect of New York City's economy, has faced unprecedented challenges due to the pandemic, with a significant downturn in visitor numbers. Nevertheless, as recovery gains momentum, a surge in tourism is expected, with the city's tourism agency forecasting a substantial 70% increase, indicating a strong rebound in spending and visitor activity.[1] Chinatown, amidst this resurgence, confronts unique hurdles, notably the rising cost of living and business operation, which a predictive analysis suggests could dampen its economic vitality without intervention. [2]Additionally, the area grapples with issues of discrimination that must be addressed to maintain its status as a diverse and inclusive destination.[3]
+      <br><br>
+      Despite these challenges, the economic prospects for Chinatown are promising. Chinatown's economic outlook is buoyant, buoyed by a $20 million investment from the New York City Regional Economic Development Council. This funding is earmarked for enhancing public spaces and cultural landmarks like Kimlau Square, and for new initiatives like a culinary arts center, to reinvigorate the area's appeal​​.[4] 
+      <br><br>
+      In response to changing preferences, Chinatown is expected to diversify its appeal further. New entertainment venues, fashion markets, and drink and dessert shops are being introduced to attract younger visitors. This diversification, supported by the Downtown Revitalization Initiative, is anticipated to inject new life into the community, thereby reinforcing Chinatown's position as an irreplaceable enclave of cultural richness within New York City's tourism landscape. [5]
+    </p>
+  </div>
+  
+  <div class="scroll-image" id="scroll-image">
+  <img src="imgs/G1.png" alt="Chinatown Tourism">
+  <p1>The chart is from the 'Welcome to Chinatown - Chinatown Impact Study (2022)' PDF</p1>
+  </div>
+</div>
+
+<div class="line"></div>
+
+<!-- 创建五个小圆点 -->
+<div class="circle circle1"></div>
+<!-- 添加足够的间隔 -->
+<div class="content" id="content1">
+  A Year of Growth and Prosperity<br><br>
+  Before the pandemic, Chinatown's tourism thrived. Cultural events drew crowds, and businesses boomed. Visitation numbers peaked, reflecting the neighborhood's allure.</div>
+
+<div class="circle circle2"></div>
+<!-- 添加足够的间隔 -->
+<div class="content" id="content2">Pandemic Challenges<br><br>
+  As COVID-19 struck, tourism plummeted. Businesses faced unprecedented challenges, with many long-standing establishments closing down, leading to a significant drop in visitation as depicted in your charts.</div>
+
+<div class="circle circle3"></div>
+<!-- 添加足够的间隔 -->
+<div class="content" id="content3">Resilience Amidst Adversity<br><br>
+  Chinatown showed resilience, with community efforts leading to gradual recovery. Initiatives to support local businesses and combat discrimination began to reshape the narrative.</div>
+
+<div class="circle circle4"></div>
+<!-- 添加足够的间隔 -->
+<div class="content" id="content4">The Path to Recovery<br><br>
+  Recovery efforts continued, with investments and redevelopment projects revitalizing the neighborhood, aiming to bring back visitors and restore economic stability.</div>
+
+<div class="circle circle5"></div>
+<!-- 添加足够的间隔 -->
+<div class="content" id="content5">A New Dawn<br><br>
+  With the pandemic receding, Chinatown is experiencing a resurgence in tourism. Innovative solutions to previous challenges, such as diversifying payment methods and enhancing cultural events, are expected to invigorate the community further.</div>
+
+<div class="content-button next" id="content-next">Next<br></div>
+<div class="content-button back" id="content-back">Back<br></div>
+
+   <!-- 创建五个年份 -->
+   <div class="text-circle1"><p><b>2019</b></p></div>
+   <div class="text-circle2"><p><b>2020</b></p></div>
+   <div class="text-circle3"><p><b>2021</b></p></div>
+   <div class="text-circle4"><p><b>2022</b></p></div>
+   <div class="text-circle5"><p><b>2023</b></p></div>
+
+<script src="./script-sec1-tourism.js"></script>
+
+
+<div id="chart" class="chart-container"></div> 
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./script-sec1-tourism-d3.js"></script>
+<div class="chart-content">
+<p>Tourism in Chinatown, New York, has experienced a dramatic trajectory from 2019 to 2023. Pre-pandemic, visitor numbers were steadily climbing, but the pandemic induced a sharp 50% decline. Remarkably, since 2023, there's been a robust recovery, with current figures exceeding pre-pandemic levels by 20%. This resurgence is attributed to Chinatown's cultural magnetism, particularly its authentic culinary scene, traditional markets, and cultural festivities like the Lunar New Year, which alone attracts over 60,000 visitors. </p> 
+<p1>The chart is created by Renee Rui, using data sourced from the 'Welcome to<br> Chinatown - Chinatown Impact Study (2022)' PDF</p1>
+</div>
+
+<!-- Grey rectangle overlay with conclusion -->
+<div class="grey-rectangle">
+  <p>Chinatown's journey from 2019 to 2023 exemplifies resilience and adaptation. Initially thriving, it faced setbacks during the pandemic, but rebounded through community efforts and strategic investments. Looking ahead, Chinatown is poised for continued growth, leveraging its cultural heritage and new initiatives to enhance its appeal. This evolution, reflecting both challenges and triumphs, positions Chinatown as a dynamic and integral part of New York City's tourism future.</p>
+<p1>Citation<br><br>
+1.“New York City Could See 70% Increase in Tourists in 2022: New Study.” ABC7 New York, March 31, 2022. https://abc7ny.com/tourism-nyc-tourists-new-york-city/11694775/#:~:text=During%20the%20pandemic%2C%20tourism%20spending,increase%20in%20tourism%20this%20year. 
+<br>
+2.Jorden, Rashaad. “New York City’s Post-Pandemic Tourism Challenges.” Skift, August 31, 2023. https://skift.com/2023/04/11/new-york-citys-post-pandemic-tourism-challenges/#:~:text=Habtemariam%20reports%20New%20York%20City,New%20York%20City%20%2B%20Conventions. 
+<br>
+3.Ibid.
+<br>
+4“Governor Hochul Announces 11 Transformational Projects for Chinatown as Part of $20 Million Round 5 Downtown Revitalization Initiative.” Governor Kathy Hochul. Accessed November 12, 2023. https://www.governor.ny.gov/news/governor-hochul-announces-11-transformational-projects-chinatown-part-20-million-round-5. 
+<br>
+5.Ibid.
+</p1>
+</div>
+</section>
+<!-----------------------------------------------tourism part----------------------------------------------->
+<!-----------------------------------------------end----------------------------------------------->
 
 
 <!-- //SECOND SECTION  David's part -->
