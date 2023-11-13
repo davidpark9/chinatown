@@ -5,7 +5,11 @@
     <link rel="stylesheet" type="text/css" href="page2-main.css">
     <link rel="stylesheet" type="text/css" href="page2-sections.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="jsPDF/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
+    <script src="node_modules/jspdf/dist/jspdf.umd.min.js"></script>
 
 
     <script>
@@ -51,30 +55,48 @@
       <div class="content">
     </section>
     
+    <button id="downloadButton">Download PDF</button>
+
+    <section class="sec2" id="sec-chinatown-tourism">
+      <div class="typing-container">
+        <div id="typing-text" id="typing-text"></div>
+      </div>
+      <script src="./script-sec1.js"></script>
+    
+      <!-- Download Button and PDF Generation Script -->
+      <button id="downloadButton">Download PDF</button>
+      <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+          console.log('Button clicked!');
+          debugger; // Add this line
+
+          // Create a new jsPDF instance
+          const pdf = new jsPDF();
+        
+          // Add some text to the PDF
+          pdf.text('Hello, this is a test PDF!', 10, 10);
+        
+          // Save the PDF with a specific name
+          pdf.save('test.pdf');
+        });
+      </script>
+    </section>
 
 
-<!-- //FIRST SECTION -->
 
-
-<section class="sec2" id="sec-chinatown-tourism">
-  <div class="typing-container">
-    <div id="typing-text" id="typing-text"></div>
-</div>
-<script src="./script-sec1.js"></script>
-</section>
 
 
 <!-- //SECOND SECTION  David's part -->
 
 <section class="sec" id="sec-chinatown-economy">
-    <h2 id="sec2title">Business Revenue per Type of Business<br> </h2>
+    <h2 id="sec2title">Business Revenue per Type of Business</h2>
     <div id="chart">Revenue for Businesses</div>
 </section>
 
 <!-- //THIRD SECTION David's part -->
 
 <section class="sec3" id="sec-chinatown-economy2">
-  <h2 id="sec2title">NYC Chinatown businesses over time <br> Covid-19 data </h2>
+  <h2 id="sec2title">NYC Chinatown businesses over time </h2>
   <canvas id="progressiveLineChart" width="40" height="30"></canvas>
   <script src="economyVisualization2.js"></script>
 
