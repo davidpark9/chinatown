@@ -55,32 +55,22 @@
       <div class="content">
     </section>
     
-    <button id="downloadButton">Download PDF</button>
 
     <section class="sec2" id="sec-chinatown-tourism">
       <div class="typing-container">
         <div id="typing-text" id="typing-text"></div>
       </div>
       <script src="./script-sec1.js"></script>
-    
-      <!-- Download Button and PDF Generation Script -->
-      <button id="downloadButton">Download PDF</button>
-      <script>
-        document.getElementById('downloadButton').addEventListener('click', function() {
-          console.log('Button clicked!');
-          debugger; // Add this line
 
-          // Create a new jsPDF instance
-          const pdf = new jsPDF();
-        
-          // Add some text to the PDF
-          pdf.text('Hello, this is a test PDF!', 10, 10);
-        
-          // Save the PDF with a specific name
-          pdf.save('test.pdf');
-        });
-      </script>
+      <button id="downloadButton">Download PDF</button>
+
+      <script src="download.js"></script>
+
     </section>
+      
+
+    
+
 
 
 
