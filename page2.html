@@ -4,11 +4,12 @@
     <title>ChinaTown Project</title>
     <link rel="stylesheet" type="text/css" href="page2-main.css">
     <link rel="stylesheet" type="text/css" href="page2-sections.css">
+    <link rel="stylesheet" type="text/css" href="renee-style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <script src="jsPDF/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
     <script src="node_modules/jspdf/dist/jspdf.umd.min.js"></script>
 
 
@@ -22,15 +23,15 @@
     </script>
 
     <script>
-        function scrollToIntro() {
-          const chinatownIntroSection = document.getElementById('sec-chinatown-intro');
-          if (chinatownIntroSection) {
-            chinatownIntroSection.scrollIntoView({ behavior: 'smooth' });
+        function scrollToWrittenEssay() {
+          const chinatownEconomySectionTwo = document.getElementById('sec-chinatown-written');
+          if (chinatownEconomySectionTwo) {
+            chinatownEconomySectionTwo.scrollIntoView({ behavior: 'smooth' });
           }
         }
       </script>
 
-       <script>
+      <script>
         function scrollToChinatownTourism() {
           const chinatownTourismSection = document.getElementById('sec-chinatown-tourism');
           if (chinatownTourismSection) {
@@ -39,16 +40,21 @@
         }
       </script>
 
+
+
   </head>
   <body>
+
+
+    
     <header>
       <!-- menu navigation modal -->
       <a href="#" class="logo">Menu</a>
       <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="javascript:void(0);" onclick="scrollToIntro()">Introduction</a></li>
-        <li><a href="javascript:void(0);" onclick="scrollToChinatownTourism()">Chinatown Tourism</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToWrittenEssay()">Written Essay</a></li>
         <li><a href="javascript:void(0);" onclick="scrollToChinatownEconomy()">Chinatown Economy</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToChinatownTourism()">Chinatown Tourism</a></li>
         <li><a href="#">Investment Infrastructure</a></li>
         <li><a href="#">Community Engagement</a></li>
       </ul>
@@ -59,8 +65,7 @@
       <img src="imgs/statue.jpg" id="stars">
       <!-- <img src="imgs/Nothing.png" id="moon"> -->
       <!-- <img src="imgs/mountains_behind.png" id="mountains_behind"> -->
-      <!-- <h2 id="text">ChinaTown</h2> -->
-      <img id="text" src="imgs/train.png" alt="Train Subway">
+      <h2 id="text">ChinaTown</h2>
 
 
       <a href="#sec" id="btn">Explore</a>
@@ -69,7 +74,7 @@
     </section>
     
 
-    <section class="sec2" id="sec-chinatown-tourism">
+    <section class="sec2" id="sec-chinatown-written">
       <div class="typing-container">
         <div id="typing-text" id="typing-text"></div>
       </div>
@@ -81,13 +86,23 @@
 
     </section>
       
-<!-- //INTRODUCTION -->
-<section class="sec2" id="sec-chinatown-intro">
-  <div class="typing-container">
-    <div id="typing-text" id="typing-text"></div>
-</div>
-<script src="./script-sec1.js"></script>
+
+<!-- //SECOND SECTION  David's part -->
+
+<section class="sec" id="sec-chinatown-economy">
+    <h2 id="sec2title">Business Revenue per Type of Business</h2>
+    <div id="chart" width="20" height="10">Revenue for Businesses</div>
 </section>
+
+<!-- //THIRD SECTION David's part -->
+<section class="sec3" id="sec-chinatown-economy2">
+  <h2 id="sec2title">NYC Chinatown businesses over time </h2>
+  <canvas id="progressiveLineChart" width="50" height="40"></canvas>
+  <script src="economyVisualization2.js"></script>
+</section>
+
+
+<!-- FOURTH SECTION image transition -->
 
 
 <!-----------------------------------------------tourism part----------------------------------------------->
@@ -102,8 +117,8 @@
   <!-- Black rectangle overlay with title -->
   <div class="black-rectangle">
     <h1>CHINATOWN <br>TOURISM</h1>
-    <p>Discover the resilience and dynamic spirit of Chinatown's tourism through its evolution and renewal.</p>
-    <p>The image is created by artist Zhi Yang</p>
+    <p id="leftalignthis">Discover the resilience and dynamic spirit of Chinatown's tourism through its evolution and renewal.</p>
+    <p1>The image is created by artist Zhi Yang</p1>
   </div>
 
 </div>
@@ -209,6 +224,8 @@
 <!-- Grey rectangle overlay with conclusion -->
 <div class="grey-rectangle">
   <p>Chinatown's journey from 2019 to 2023 exemplifies resilience and adaptation. Initially thriving, it faced setbacks during the pandemic, but rebounded through community efforts and strategic investments. Looking ahead, Chinatown is poised for continued growth, leveraging its cultural heritage and new initiatives to enhance its appeal. This evolution, reflecting both challenges and triumphs, positions Chinatown as a dynamic and integral part of New York City's tourism future.</p>
+
+ 
 <p1>Citation<br><br>
 1.“New York City Could See 70% Increase in Tourists in 2022: New Study.” ABC7 New York, March 31, 2022. https://abc7ny.com/tourism-nyc-tourists-new-york-city/11694775/#:~:text=During%20the%20pandemic%2C%20tourism%20spending,increase%20in%20tourism%20this%20year. 
 <br>
@@ -221,35 +238,11 @@
 5.Ibid.
 </p1>
 </div>
+
+
 </section>
 <!-----------------------------------------------tourism part----------------------------------------------->
 <!-----------------------------------------------end----------------------------------------------->
-
-
-<!-- //SECOND SECTION  David's part -->
-
-<section class="sec" id="sec-chinatown-economy">
-    <h2 id="sec2title">Business Revenue per Type of Business</h2>
-    <div id="chart" width="20" height="10">Revenue for Businesses</div>
-</section>
-
-<!-- //THIRD SECTION David's part -->
-
-<section class="sec3" id="sec-chinatown-economy2">
-
-  <h2 id="sec2title">NYC Chinatown businesses over time </h2>
-
-  <canvas id="progressiveLineChart" width="50" height="40"></canvas>
-  <script src="economyVisualization2.js"></script>
-
-</section>
-
-
-<!-- FOURTH SECTION image transition -->
-
-
-<!-- FIFTH SECTION Renee's Placement-->
-
 
 
 <!-- SIXTH SECTION Renee's Placement-->
