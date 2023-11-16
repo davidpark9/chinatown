@@ -1,3 +1,11 @@
+
+.sec5 {
+    position: relative;
+    min-height: 500px;
+    padding: 100px;
+    background: black;
+}
+
 body {
     background-color: black;
     color: white;
@@ -35,13 +43,16 @@ body {
     text-align: center;
     margin: 20px;
     padding: 20px;
+    font-size: 25px;
 }
+
 
 .container {
     width: calc(100% - 200px);
     height: 100vh;
     overflow-y: auto;
     margin: 0 auto;
+    background-color: black;
 }
 
 .button-row {

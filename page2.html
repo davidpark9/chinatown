@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="page2-sections.css">
     <link rel="stylesheet" type="text/css" href="renee-style.css">
     <link rel="stylesheet" type="text/css" href="georgina-style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="yingchen-style.css"> -->
+    <link rel="stylesheet" type="text/css" href="yingchen-style.css">
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -56,6 +56,16 @@
       </script>
 
 
+      <script>
+        function scrollToChinatownCommunity() {
+          const chinatownCommunitySection = document.getElementById('sec-chinatown-community');
+          if (chinatownCommunitySection) {
+            chinatownCommunitySection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+
+
   </head>
   <body>
 
@@ -70,7 +80,8 @@
         <li><a href="javascript:void(0);" onclick="scrollToChinatownEconomy()">Chinatown Economy</a></li>
         <li><a href="javascript:void(0);" onclick="scrollToChinatownTourism()">Chinatown Tourism</a></li>
         <li><a href="javascript:void(0);" onclick="scrollToChinatownTransportation()">Chinatown Transportation</a></li>
-        <li><a href="#">Community Engagement</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToChinatownCommunity()">Chinatown Community</a></li>
+
       </ul>
     </header>
     
@@ -310,11 +321,16 @@ it is crucial to consider the vast bus network that provides easy access to this
 </section>
 
 <!-- YINGCHENS PLACE -->
+<!-- YINGCHENS PLACE -->
+<!-- YINGCHENS PLACE -->
+<!-- YINGCHENS PLACE -->
 
-<div id="intro-text">
-  <p>Chinatown's economy is a blend of traditional and modern influences, thriving due to its rich cultural heritage and adaptability. This unique combination, supported by diverse cultural events, contributes significantly to its economic success in New York City. <br><br> Drag the icons to view each event!</p>
-</div>
-<section class="" id="hello-world">
+<section class="sec5" id="sec-chinatown-community">
+<!-- <div id="intro-text">
+  <p>Chinatown's economy is a blend of traditional and modern influences, thriving due to its rich cultural heritage and adaptability. This unique combination, supported by diverse cultural events, contributes significantly to its economic success in New York City.<br><br> Drag the icons to view each event!</p>
+</div> -->
+
+
 <div class="container">
   <div class="button-row">
       <img src="imgs/lunar.png" class="image-button" id="draggable-button">
