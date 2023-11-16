@@ -67,7 +67,7 @@
 
 
   </head>
-  <body>
+  <body onload="startAnimation('m9')">
 
 
     
@@ -118,11 +118,13 @@
     <h2 id="sec2title">Business Revenue per Type of Business</h2>
     <div id="chart2" width="20" height="10">Revenue for Businesses</div>
 </section>
+<script type="module" src="./economy-revenue.js"></script>
+
 
 <!-- //THIRD SECTION David's part -->
 <section class="sec3" id="sec-chinatown-economy2">
   <h2 id="sec2title">NYC Chinatown businesses over time </h2>
-  <canvas id="progressiveLineChart" width="50" height="40"></canvas>
+  <canvas id="progressiveLineChart" width="45" height="40"></canvas>
   <script src="economyVisualization2.js"></script>
 </section>
 
@@ -279,7 +281,7 @@
 
 <!-- NINTH Georgina Placement-->
 
-<section class="sec4" id="sec-chinatown-transportation">
+<section class="sec4" id="sec-chinatown-transportation" >
 <div class="title-container">
   <h6>Tracking Transportation of MTA within Chinatown</h6>
 </div>
@@ -318,48 +320,45 @@ it is crucial to consider the vast bus network that provides easy access to this
 </p>
 
 <script src="transportation.js"></script>
+
 </section>
-
 <!-- YINGCHENS PLACE -->
 <!-- YINGCHENS PLACE -->
 <!-- YINGCHENS PLACE -->
 <!-- YINGCHENS PLACE -->
 
-<section class="sec5" id="sec-chinatown-community">
-<!-- <div id="intro-text">
-  <p>Chinatown's economy is a blend of traditional and modern influences, thriving due to its rich cultural heritage and adaptability. This unique combination, supported by diverse cultural events, contributes significantly to its economic success in New York City.<br><br> Drag the icons to view each event!</p>
-</div> -->
-
-
+<!-- geting rid of the 'section ' at least made it appear -->
+<!-- <section class="sec5" id="sec-chinatown-community"> -->
+<div id="sec-chinatown-community">
 <div class="container">
-  <div class="button-row">
-      <img src="imgs/lunar.png" class="image-button" id="draggable-button">
-      <div class="text-container">
-          <p>Lunar New Year in Chinatown is a vibrant celebration, <br> featuring colorful decorations, lion dances, and traditional foods <br> symbolizing prosperity. These festivities include cultural workshops <br> and activities, enhancing appreciation for Chinese heritage. <br> The event is inclusive, welcoming people from various <br> backgrounds, fostering community engagement <br> and cultural exchange.</p>
-      </div>
-  </div>
-  <div class="button-row right-aligned">
-      <img src="imgs/night.png" class="image-button" id="draggable-button-left">
-      <div class="text-container-right">
-          <p>The Chinatown Night Market in Manhattan is a lively,<br> monthly summer event at Forsyth Plaza. It blends food, art, <br> and music, showcasing local vendors and traditional folk arts like <br> paper cutting and sugar painting. This open-air festival celebrates <br> Chinatown's culture and community, offering a unique and <br> vibrant experience of communal joy and cultural richness.</p>
-      </div>
-  </div>
-  <div class="button-row">
-      <img src="imgs/taichi.png" class="image-button" id="draggable-button-right">
-      <div class="text-container">
-          <p>The Chinatown Block Party at Mott & Mosco Streets is <br> a vibrant, family-friendly event celebrating the community's <br> musical and cultural heritage. Featuring a DJ and guests, <br> it connects generations through music and dance, continuing a <br> legacy of neighborhood gatherings. This lively event showcases <br>  Chinatown's resilience, diversity, and commitment to <br> preserving its unique cultural identity.</p>
-      </div>
-  </div>
-  <div class="button-row right-aligned">
-      <img src="imgs/art.png" class="image-button" id="draggable-button-left-2">
-      <div class="text-container-right">
-          <p>"Assembly for Chinatown" brings artistic flair to outdoor <br> dining in Chinatown, with local artists and volunteers creating <br> vibrant murals. This initiative enhances the <br> neighborhood's visual appeal, celebrates community <br> spirit, and supports local restaurants <br> through creative expression.</p>
-      </div>
-  </div>
+    <div class="button-row">
+        <img src="imgs/lunar.png" class="image-button" id="draggable-button">
+        <div class="text-container">
+            <p>Lunar New Year in Chinatown is a vibrant celebration, <br> featuring colorful decorations, lion dances, and traditional foods <br> symbolizing prosperity. These festivities include cultural workshops <br> and activities, enhancing appreciation for Chinese heritage. <br> The event is inclusive, welcoming people from various <br> backgrounds, fostering community engagement <br> and cultural exchange.</p>
+        </div>
+    </div>
+    <div class="button-row right-aligned">
+        <img src="imgs/night.png" class="image-button" id="draggable-button-left">
+        <div class="text-container-right">
+            <p>The Chinatown Night Market in Manhattan is a lively,<br> monthly summer event at Forsyth Plaza. It blends food, art, <br> and music, showcasing local vendors and traditional folk arts like <br> paper cutting and sugar painting. This open-air festival celebrates <br> Chinatown's culture and community, offering a unique and <br> vibrant experience of communal joy and cultural richness.</p>
+        </div>
+    </div>
+    <div class="button-row">
+        <img src="imgs/taichi.png" class="image-button" id="draggable-button-right">
+        <div class="text-container">
+            <p>The Chinatown Block Party at Mott & Mosco Streets is <br> a vibrant, family-friendly event celebrating the community's <br> musical and cultural heritage. Featuring a DJ and guests, <br> it connects generations through music and dance, continuing a <br> legacy of neighborhood gatherings. This lively event showcases <br>  Chinatown's resilience, diversity, and commitment to <br> preserving its unique cultural identity.</p>
+        </div>
+    </div>
+    <div class="button-row right-aligned">
+        <img src="imgs/art.png" class="image-button" id="draggable-button-left-2">
+        <div class="text-container-right">
+            <p>"Assembly for Chinatown" brings artistic flair to outdoor <br> dining in Chinatown, with local artists and volunteers creating <br> vibrant murals. This initiative enhances the <br> neighborhood's visual appeal, celebrates community <br> spirit, and supports local restaurants <br> through creative expression.</p>
+        </div>
+    </div>
 </div>
-</section>
-
-<script src="js/community.js"></script>
+<!-- </section> -->
+</div>
+<script src="./community.js"></script>
 
 
 
@@ -389,7 +388,6 @@ it is crucial to consider the vast bus network that provides easy access to this
 </script>
 
     
-    <script type="module" src="./economy-revenue.js"></script>
   </body>
 </html>
 

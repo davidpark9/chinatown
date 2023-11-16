@@ -21,7 +21,7 @@
   #sec-chinatown-tourism {
     font-size: 1.2em;
     text-align: left;
-    margin-top: 135px;
+    
     top: 50%; /* Adjust as needed */
  
   }
@@ -395,12 +395,12 @@
     }
 
   /* commented the svg css because it broke my d3 viz. we both are using d3, so svg is used for both d3 viz - David*/
-    /* svg {
+    svg {
     display: relative;
-    background: yellow;
+    background:black;
     top: 250%; 
     left: 10%; 
-    } */
+    }
   
     .chart-content p{
     width: 50%;
@@ -433,7 +433,7 @@
         position: absolute;
         top: 80%; /* Adjust the position as needed */
         left: 5%;
-        background-color: gray;
+        background-color: rgb(27, 27, 27, 0.8);
         display: flex;
         justify-content: center; /* Horizontally center content */
         align-items: center; /* Vertically center content */

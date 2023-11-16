@@ -25,13 +25,26 @@ const x = d3.scaleBand().range([0, width]).padding(0.1);
 const y = d3.scaleLinear().range([height, 0]);
 
 x.domain(data.map((d) => d.transportMode));
+y.domain([0, d3.max(data, (d) => d.count)]);
 
-y.domain([
-  1000,
-  d3.max(data, function (d) {
-    return d.count;
-  }),
-]);
+const gradient = svg
+  .append("defs")
+  .append("linearGradient")
+  .attr("id", "gradient")
+  .attr("x1", "0%")
+  .attr("y1", "100%")
+  .attr("x2", "0%")
+  .attr("y2", "0%");
+
+gradient
+  .append("stop")
+  .attr("offset", "0%")
+  .style("stop-color", "rgba(0, 0, 255, 0.7)");
+
+gradient
+  .append("stop")
+  .attr("offset", "100%")
+  .style("stop-color", "rgba(255, 0, 0, 0.7)");
 
 svg
   .selectAll(".bar")
@@ -39,36 +52,49 @@ svg
   .enter()
   .append("rect")
   .attr("class", "bar")
-  .attr("x", function (d) {
-    return x(d.transportMode);
-  })
+  .attr("x", (d) => x(d.transportMode))
   .attr("width", x.bandwidth())
   .attr("y", height)
   .attr("height", 0)
-  .style("fill", function (d) {
-    if (d.date === "2021") {
-      "rgba(255, 0, 0, 0.7)";
-    } else if (d.date === "2020") {
-      return "rgba(0, 128, 0, 0.7)";
-    } else {
-      return "rgba(0, 128, 0, 0.7)";
-    }
-  })
-  .style("fill-opacity", 1)
+  .style("fill", "none")
+  .style("stroke", (d) => `url(#gradient)`)
+  .style("stroke-dasharray", "9,9")
   .transition()
-  .duration(1000)
-  .attr("y", function (d) {
-    return y(d.count);
-  })
-  .attr("height", function (d) {
-    return height - y(d.count);
-  });
+  .duration(2000)
+  .attr("y", (d) => y(d.count))
+  .attr("height", (d) => height - y(d.count));
 
-// add the x Axis
+// Add the x Axis
 svg
   .append("g")
   .attr("transform", "translate(0," + height + ")")
   .call(d3.axisBottom(x));
 
-// add the y Axis
+// Add the y Axis
 svg.append("g").call(d3.axisLeft(y));
+
+// Add text for 2020
+svg
+  .selectAll(".text-2020") // Update the class name to distinguish from 2021 text
+  .data(data.filter((d) => d.date === "2020"))
+  .enter()
+  .append("text")
+  .attr("class", "text-2020") // Set a different class name for 2020 text
+  .attr("x", (d) => x(d.transportMode) + x.bandwidth() / 2)
+  .attr("y", (d) => y(d.count) - 10) // Adjust the vertical position of the text
+  .attr("text-anchor", "middle")
+  .attr("fill", "#fff") // Set the text color to white
+  .text("2020");
+
+// Add text for 2021
+svg
+  .selectAll(".text-2021") // Set a different class name for 2021 text
+  .data(data.filter((d) => d.date === "2021"))
+  .enter()
+  .append("text")
+  .attr("class", "text-2021") // Set a different class name for 2021 text
+  .attr("x", (d) => x(d.transportMode) + x.bandwidth() / 2)
+  .attr("y", (d) => y(d.count) - 10) // Adjust the vertical position of the text
+  .attr("text-anchor", "middle")
+  .attr("fill", "#fff") // Set the text color to white
+  .text("2021");

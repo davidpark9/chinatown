@@ -111,6 +111,18 @@ function startAnimation(buttonId) {
       // detailsParagraph.classList.add('typewriter');
       detailsParagraph.style.display = "block";
       break;
+
+    default:
+      rectangle.style.backgroundColor = "#FFFFFF";
+      rectangleText.innerHTML =
+        "Total Average Monthly Bus Ridership (2021)" +
+        createSpaces(5) +
+        "-" +
+        createSpaces(5) +
+        " 392,897";
+      rectangleText.style.color = "#000000";
+      detailsParagraph.style.display = "block";
+      break;
   }
 
   // Show the animation container and start the animation

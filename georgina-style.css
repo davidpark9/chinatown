@@ -1,10 +1,10 @@
 
 .sec4 {
     position: relative;
-    min-height: 500px;
+    min-height: 400px;
     padding: 100px;
     background-color: black;
-    height: 1600px; 
+    height: 1300px; 
   
 
   }
@@ -12,12 +12,6 @@
 
   h1 {
     font-size: 50px;
-  }
-
-  body {
-    background-color: black; 
-    margin: 0; 
-    padding: 0; 
   }
 
 .title-container {
@@ -40,7 +34,7 @@
 .buttons {
   position: absolute;
   left: 150px;
-  top: 50%; /* Start at the vertical center of the viewport */
+  top: 30%; /* Start at the vertical center of the viewport */
   transform: translateY(-50%); /* Center the buttons container vertically */
   z-index: 10;
 }
@@ -154,7 +148,7 @@
     justify-content: center;
     position: absolute; 
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
     background-color: #f0f0f0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -168,7 +162,7 @@
     background-color: #4F2A5F; 
     position: absolute;
     left: 50%; /* Centered horizontally */
-    top: calc(50% + 250px + 40px); /* 50% + half of the container's height + 20px margin */
+    top: calc(30% + 250px + 40px); /* 50% + half of the container's height + 20px margin */
     transform: translateX(-50%); /* Centers the rectangle horizontally */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -211,7 +205,7 @@
   text-align: justify; 
   width: 60%; 
   left: 50%; 
-  top: calc(50% + 250px + 40px + 80px); /* Position below the rectangle */
+  top: calc(30% + 250px + 40px + 80px); /* Position below the rectangle */
   transform: translateX(-50%);
   font-size: 25px;
   z-index: 2;

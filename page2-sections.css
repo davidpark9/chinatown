@@ -2,9 +2,16 @@
 
 /* PLEASE make sure to write css for the sections individually here. Do not add it to the the page2-main.css file! */
 
+
+
+
+
+
 #chart2{
   font-size: 20px;
+  
 }
+
 
 
 #sec2title {
@@ -15,16 +22,15 @@
 
 .sec, .sec2, .sec3 {
     position: relative;
-    min-height: 500px;
+    min-height: 400px;
     padding: 100px;
-    background: black;
+    
   }
   
   
   /* added georginas and yingchen's class sec4 */
   .sec, .sec2, .sec3, .sec4, .sec5, h2 {
     font-size: 3.5em;
-    margin-bottom: 10px;
     color: #fff;
   }
   

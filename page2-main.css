@@ -1,24 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Work Sans');
+@import url('https://fonts.googleapis.com/css?family=Karla');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(black,#7597de);
+  background: black;
 
 }
-
-#chart {
-    width: 600px;
-    height: 400px;
-  }
-
 
 section {
 

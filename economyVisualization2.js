@@ -30,8 +30,8 @@ const data = {
   datasets: [
     {
       label: "Businesses Open",
-      borderColor: "blue",
-      borderDash: [5, 5], // This makes the line dotted.
+      borderColor: "white",
+      borderDash: [7, 7], // This makes the line dotted.
       data: [
         3000, 2980, 2930, 2830, 2680, 2580, 2480, 2380, 2280, 2180, 2080, 2030,
         1980, 1930, 1880, 1830, 1780, 1730, 1680, 1630, 1580, 1530, 1480, 1430,
