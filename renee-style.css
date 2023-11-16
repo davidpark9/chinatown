@@ -420,8 +420,8 @@
       left: 40%;
       transform: rotate(-90deg); /* 逆时针旋转90度 */
       font-weight:lighter;
-    font-style: italic;
-    font-size: 10px;
+      font-style: italic;
+      font-size: 10px;
       }
     
   
