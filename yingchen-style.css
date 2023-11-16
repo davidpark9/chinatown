@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0 100px;
+}
+
+#section {
+    pointer-events: none;
+    display: none;
+}
+
+
+#intro-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    z-index: 1000; 
+    transition: opacity 2s ease, visibility 2s ease;
+    opacity: 1;
+    visibility: visible;
+    font-family: 'Work Sans', sans-serif;
+    line-break: auto;
+}
+
+#intro-text p {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.container {
+    width: calc(100% - 200px);
+    height: 100vh;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+.button-row {
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.button-row.right-aligned {
+    text-align: right;
+}
+
+.image-button {
+    margin: 10px;
+    cursor: pointer;
+    width: 500px;
+    height: auto;
+}
+
+.text-container, .text-container-right {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: white;
+    padding: 15px;
+    font-size: 1.4em;
+    line-height: 1.6;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.text-container {
+    text-align: left;
+}
+
+.text-container-right {
+    text-align: right;
+}
+
+.glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}

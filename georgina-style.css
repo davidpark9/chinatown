@@ -1,0 +1,223 @@
+
+.sec4 {
+    position: relative;
+    min-height: 500px;
+    padding: 100px;
+    background-color: black;
+    height: 1600px; 
+  
+
+  }
+  
+
+  h1 {
+    font-size: 50px;
+  }
+
+  body {
+    background-color: black; 
+    margin: 0; 
+    padding: 0; 
+  }
+
+.title-container {
+  position: absolute; 
+  width: 100%; 
+  top: 50px; 
+  text-align: center; 
+  z-index: 10; 
+}
+
+.title-container h1 {
+  display: inline-block; 
+  margin-top: 30px;
+  color: #fff; 
+  font-size: 2em; 
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.buttons {
+  position: absolute;
+  left: 150px;
+  top: 50%; /* Start at the vertical center of the viewport */
+  transform: translateY(-50%); /* Center the buttons container vertically */
+  z-index: 10;
+}
+
+  
+.button {
+  position: absolute;
+  left: 0;
+  height: 45px;
+  width: 120px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+#m9 { top: -180px; } /* This will be the offset from the center */
+#m14a { top: -135px; }
+#m15 { top: -90px; }
+#m15s { top: -45px; }
+#m22 { top: 0px; }
+#m55 { top: 45px; }
+#m103 { top: 90px; }
+#all { top: 135px; }
+
+
+
+
+  .button:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+  }
+
+  #m9 {
+    background-color: #4F2A5F; 
+    color: #FFFFFF; 
+  }
+  
+  #m14a {
+    background-color: #448B80; 
+    color: #FFFFFF; 
+  }
+  
+  #m15 {
+    background-color: #0A69AE; 
+    color: #FFFFFF; 
+  }
+
+  #m15s {
+    background-color: #0b73be; 
+    color: #FFFFFF; 
+  }
+
+  #m22 {
+    background-color: #1CC2D8; 
+    color: #FFFFFF; 
+  }
+
+  #m55 {
+    background-color: #8EC3A4; 
+    color: #FFFFFF; 
+  }
+
+  #m103 {
+    background-color: #4F2A5F; 
+    color: #FFFFFF; 
+  }
+
+  #all {
+    background-color: #FFFFFF; 
+    color: #4F2A5F; 
+  }
+
+
+  .black-canvas {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background-image: url('street.png'); 
+    background-size: cover;
+    background-position: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0; 
+    animation: fadeIn 2s ease forwards; 
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+  #gifAnimation {
+    width: 100%; 
+    height: auto;
+    max-width: 800px; 
+    max-height: 500px; 
+  }
+
+.animation-container {
+    width: 800px; 
+    height: 500px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    display: none;
+  }
+
+  .rectangle {
+    width: 620px; 
+    height: 40px; 
+    background-color: #4F2A5F; 
+    position: absolute;
+    left: 50%; /* Centered horizontally */
+    top: calc(50% + 250px + 40px); /* 50% + half of the container's height + 20px margin */
+    transform: translateX(-50%); /* Centers the rectangle horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.rectangle-text {
+  color: #fff; /* Set text color */
+  text-align: center; /* Center the text horizontally */
+  position: absolute; /* Position it relative to its parent */
+  width: 100%; /* Take up full width of the parent */
+  top: 50%; /* Center it vertically */
+  transform: translateY(-50%); /* Align center vertically to the parent */
+  font-size: 16px; /* Or any other size */
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* .typewriter {
+  overflow: hidden;
+  border-right: .15em solid white; The typewriter cursor */
+  /* animation: typewriter 4s steps(40, end) forwards, blink-caret .75s step-end infinite;
+} */
+
+
+/* Typewriter typing effect */
+/* @keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+} */
+
+/* Cursor blinking effect */
+/* @keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+} */
+
+.details-paragraph {
+  position: absolute;
+  color: #fff; 
+  margin-top: 20px; /* Space below the rectangle */
+  text-align: justify; 
+  width: 60%; 
+  left: 50%; 
+  top: calc(50% + 250px + 40px + 80px); /* Position below the rectangle */
+  transform: translateX(-50%);
+  font-size: 25px;
+  z-index: 2;
+  font-family: 'Work Sans', sans-serif;
+  display: none; /* Initially hidden */
+  margin-left: auto;
+  margin-right: auto;
+}
+

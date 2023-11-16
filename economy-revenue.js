@@ -14,7 +14,7 @@ var margin = { top: 20, right: 20, bottom: 30, left: 40 },
   height = 500 - margin.top - margin.bottom;
 
 const svg = d3
-  .select("#chart")
+  .select("#chart2")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
@@ -47,11 +47,11 @@ svg
   .attr("height", 0)
   .style("fill", function (d) {
     if (d.date === "2021") {
-      return "red";
+      "rgba(255, 0, 0, 0.7)";
     } else if (d.date === "2020") {
-      return "green";
+      return "rgba(0, 128, 0, 0.7)";
     } else {
-      return "gray";
+      return "rgba(0, 128, 0, 0.7)";
     }
   })
   .style("fill-opacity", 1)

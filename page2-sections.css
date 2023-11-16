@@ -2,7 +2,7 @@
 
 /* PLEASE make sure to write css for the sections individually here. Do not add it to the the page2-main.css file! */
 
-#chart {
+#chart2{
   font-size: 20px;
 }
 
@@ -12,25 +12,23 @@
    font-size: 75px;
 }
 
-.sec, .sec2, .sec3  {
+
+.sec, .sec2, .sec3 {
     position: relative;
     min-height: 500px;
     padding: 100px;
     background: black;
-    
-    
   }
   
-  .sec, .sec2, .sec3 h2 {
+  
+  /* added georginas and yingchen's class sec4 */
+  .sec, .sec2, .sec3, .sec4, .sec5 h2 {
     font-size: 3.5em;
     margin-bottom: 10px;
     color: #fff;
   }
   
-   p {
-    font-size: .5em;
-    color: #fff;
-  }
+   
 
   
 /* Below is the css for the typing effect for section 1 */

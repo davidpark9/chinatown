@@ -3,21 +3,22 @@
 /*-----------------------------------------------tourism section's transition img and content----------------------------------------------- */
 .tourism-section {
     position: relative;
-    height: 5000px; 
+    height: 4800px; 
     padding: 100px;
     background: black;
   }
   
-  #sec-chinatown-tourism.tourism-section {
+  #sec-chinatown-tourism .tourism-section {
     padding: 100px 0;
     min-height: 600px;
+    
   }
   
   #sec-chinatown-tourism h1, #sec-chinatown-tourism h2 {
     font-weight: bold;
   }
   
-  #sec-chinatown-tourism #leftalignthis {
+  #sec-chinatown-tourism {
     font-size: 1.2em;
     text-align: left;
     margin-top: 135px;
@@ -25,6 +26,13 @@
  
   }
 
+  #leftalignthis {
+    font-size: 1.2em;
+    text-align: left;
+    margin-top: 135px;
+    top: 50%; /* Adjust as needed */
+
+  }
 
 
 
@@ -53,7 +61,7 @@
   
   .black-rectangle {
     position: absolute;
-    top: 20%; /* Adjust as necessary */
+    top: 21%; /* Adjust as necessary */
     left: 5%; /* Adjust as necessary */
     width: 32%; /* Or any width you prefer */
     height: 180px; /* Or any height you prefer */
@@ -87,7 +95,7 @@
   
   .black-rectangle p1 {
     position: absolute;
-    top: 108%; /* Adjust as necessary */
+    top: 90%; /* Adjust as necessary */
     left: 247%; /* Adjust as necessary */
     text-align: left;
     width: 120%;
@@ -205,8 +213,8 @@
     width: 45.5%;
     color: #fff;
     position: absolute;
-    top: 55.5%;
-    left: 6%;
+    top: 56%;
+    left: 8.5%;
     transform: rotate(90deg); 
     font-weight:lighter;
   font-style: italic;
@@ -217,7 +225,7 @@
   
   /*-----------------------------------------------circles with timeline and its content----------------------------------------------- */
   .line { 
-    border-bottom: 5px solid;
+    border-bottom: 2px solid;
     color:rgb(181, 181, 181); 
     width: 70%; 
     position: absolute;
@@ -228,15 +236,15 @@
   } 
   
   .circle {
-    width: 35px;
-    height: 35px;
+    width: 15px;
+    height: 15px;
     background-color: white;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
     z-index: 2;
     position: absolute;
-    top: 55.5%;
+    top: 55.7%;
     margin-top: 190px;
   
   
@@ -258,9 +266,9 @@
   .text-circle1{
     position: absolute;
     top: 54.5%;
-    left: 14.5%;
+    left: 13.5%;
     color: white;
-    font-size: 60px;;
+    font-size: 30px;;
     margin-top: 190px;
   }
   
@@ -275,9 +283,9 @@
   .text-circle2{
     position: absolute;
     top: 54.5%;
-    left: 32%;
+    left: 31%;
     color: white;
-    font-size: 60px;;
+    font-size: 30px;;
     margin-top: 190px;
   }
   
@@ -291,9 +299,9 @@
   .text-circle3{
     position: absolute;
     top: 54.5%;
-    left: 49.5%;
+    left: 48.5%;
     color: white;
-    font-size: 60px;;
+    font-size: 30px;;
     margin-top: 190px;
 
   }
@@ -308,10 +316,10 @@
   .text-circle4{
     position: absolute;
     top: 54.5%;
-    left: 67%;
+    left: 66%;
     color: white;
     margin-top: 190px;
-    font-size: 60px;;
+    font-size: 30px;;
 
   }
   
@@ -326,9 +334,9 @@
   .text-circle5{
     position: absolute;
     top: 54.5%;
-    left: 84.5%;
+    left: 83.5%;
     color: white;
-    font-size: 60px;;
+    font-size: 30px;;
     margin-top: 190px;
   }
   
@@ -371,41 +379,43 @@
   
   
   
+   
+
   
    /*-----------------------------------------------chart2 with its content----------------------------------------------- */
     .chart-container {
-      position: relative; /* 这将成为SVG的定位上下文 */
-      height: 500px; /* 应该和SVG的高度一致 */
-      width: 750px; /* 应该和SVG的宽度一致 */
-      margin: auto; /* 居中显示 */
-      position: absolute; /* 或者 'relative'，取决于您的布局需求 */
-      top: 47.5%; /* 距离包含它的容器顶部的距离，根据需要调整 */
-    left: 10%; /* 距离包含它的容器左侧的距离，根据需要调整 */
+      position: relative; 
+      height: 500px; 
+      width: 750px; 
+      margin: auto; 
+      position: absolute; 
+      top: 69.5%; 
+      left: 15%;
+     
     }
-  
-    svg {
-      display: block;
-      background: #000000;
-  
-        /* 将图片定位在页面上的特定位置，根据需要调整这些值 */
-    position: absolute; /* 或者 'relative'，取决于您的布局需求 */
-    top: 250%; /* 距离包含它的容器顶部的距离，根据需要调整 */
-    left: 10%; /* 距离包含它的容器左侧的距离，根据需要调整 */
-    }
+
+  /* commented the svg css because it broke my d3 viz. we both are using d3, so svg is used for both d3 viz - David*/
+    /* svg {
+    display: relative;
+    background: yellow;
+    top: 250%; 
+    left: 10%; 
+    } */
   
     .chart-content p{
     width: 50%;
     color: #fff;
-    position: absolute;
-    top: 63%;
+    top: 62%;
     left: 15%;
     font-size: 20px;
     }
   
     .chart-content p1{
       width: 45.5%;
-      color:gray; /* Black with some opacity */
+      color:gray; 
+      opacity: 0%;
       position: absolute;
+      background-color: brown;
       top: 69.5%;
       left: 40%;
       transform: rotate(-90deg); /* 逆时针旋转90度 */
@@ -421,9 +431,9 @@
         height: 190px; /* Set the height to fit your content */
         margin: auto; /* Centers the rectangle in its parent if the parent is flex or has a specified width */
         position: absolute;
-        top: 79%; /* Adjust the position as needed */
+        top: 80%; /* Adjust the position as needed */
         left: 5%;
-        background-color: #2E2E2E; /* Dark grey background */
+        background-color: gray;
         display: flex;
         justify-content: center; /* Horizontally center content */
         align-items: center; /* Vertically center content */
@@ -434,6 +444,7 @@
         color: white; /* White text color */
         padding: 40px;
         font-size: 20px;
+        margin-bottom: 30PX;
       }
       
       .grey-rectangle p1 {

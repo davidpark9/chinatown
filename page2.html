@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="page2-main.css">
     <link rel="stylesheet" type="text/css" href="page2-sections.css">
     <link rel="stylesheet" type="text/css" href="renee-style.css">
+    <link rel="stylesheet" type="text/css" href="georgina-style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="yingchen-style.css"> -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
@@ -13,20 +16,22 @@
     <script src="node_modules/jspdf/dist/jspdf.umd.min.js"></script>
 
 
-    <script>
-      function scrollToChinatownEconomy() {
-        const chinatownEconomySection = document.getElementById('sec-chinatown-economy');
-        if (chinatownEconomySection) {
-          chinatownEconomySection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    </script>
+  
 
     <script>
         function scrollToWrittenEssay() {
           const chinatownEconomySectionTwo = document.getElementById('sec-chinatown-written');
           if (chinatownEconomySectionTwo) {
             chinatownEconomySectionTwo.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
+
+      <script>
+        function scrollToChinatownEconomy() {
+          const chinatownEconomySection = document.getElementById('sec-chinatown-economy');
+          if (chinatownEconomySection) {
+            chinatownEconomySection.scrollIntoView({ behavior: 'smooth' });
           }
         }
       </script>
@@ -40,6 +45,15 @@
         }
       </script>
 
+
+      <script>
+        function scrollToChinatownTransportation() {
+          const chinatownTransportationSection = document.getElementById('sec-chinatown-transportation');
+          if (chinatownTransportationSection) {
+            chinatownTransportationSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      </script>
 
 
   </head>
@@ -55,7 +69,7 @@
         <li><a href="javascript:void(0);" onclick="scrollToWrittenEssay()">Written Essay</a></li>
         <li><a href="javascript:void(0);" onclick="scrollToChinatownEconomy()">Chinatown Economy</a></li>
         <li><a href="javascript:void(0);" onclick="scrollToChinatownTourism()">Chinatown Tourism</a></li>
-        <li><a href="#">Investment Infrastructure</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToChinatownTransportation()">Chinatown Transportation</a></li>
         <li><a href="#">Community Engagement</a></li>
       </ul>
     </header>
@@ -79,8 +93,8 @@
         <div id="typing-text" id="typing-text"></div>
       </div>
       <script src="./script-sec1.js"></script>
-
-      <button id="downloadButton">Download PDF</button>
+      <br>
+      <button id="downloadButton">Download Full Research</button>
 
       <script src="download.js"></script>
 
@@ -91,7 +105,7 @@
 
 <section class="sec" id="sec-chinatown-economy">
     <h2 id="sec2title">Business Revenue per Type of Business</h2>
-    <div id="chart" width="20" height="10">Revenue for Businesses</div>
+    <div id="chart2" width="20" height="10">Revenue for Businesses</div>
 </section>
 
 <!-- //THIRD SECTION David's part -->
@@ -120,8 +134,6 @@
     <p id="leftalignthis">Discover the resilience and dynamic spirit of Chinatown's tourism through its evolution and renewal.</p>
     <p1>The image is created by artist Zhi Yang</p1>
   </div>
-
-</div>
 
 <!-- The container for the text and image -->
 <div class="scroll-container" id="scroll-container">
@@ -156,14 +168,27 @@
     <span class="char">w</span>
     <span class="char">n</span>
   </h2>
-    <p>
+
+<!-- THIS IS THE DIV FOR RENEES D3 VIZ -->
+<div class="chart-container" id="chart" width="20" height="10"></div>
+<!-- THIS IS THE DIV FOR RENEES D3 VIZ -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="./script-sec1-tourism-d3.js"></script>
+<div class="chart-content">
+<p>Tourism in Chinatown, New York, has experienced a dramatic trajectory from 2019 to 2023. Pre-pandemic, visitor numbers were steadily climbing, but the pandemic induced a sharp 50% decline. Remarkably, since 2023, there's been a robust recovery, with current figures exceeding pre-pandemic levels by 20%. This resurgence is attributed to Chinatown's cultural magnetism, particularly its authentic culinary scene, traditional markets, and cultural festivities like the Lunar New Year, which alone attracts over 60,000 visitors. </p> 
+<p1>The chart is created by Renee Rui, using data sourced from the 'Welcome to<br> Chinatown - Chinatown Impact Study (2022)' PDF </p1>
+</div>
+
+<p>
       Tourism, a critical aspect of New York City's economy, has faced unprecedented challenges due to the pandemic, with a significant downturn in visitor numbers. Nevertheless, as recovery gains momentum, a surge in tourism is expected, with the city's tourism agency forecasting a substantial 70% increase, indicating a strong rebound in spending and visitor activity.[1] Chinatown, amidst this resurgence, confronts unique hurdles, notably the rising cost of living and business operation, which a predictive analysis suggests could dampen its economic vitality without intervention. [2]Additionally, the area grapples with issues of discrimination that must be addressed to maintain its status as a diverse and inclusive destination.[3]
       <br><br>
       Despite these challenges, the economic prospects for Chinatown are promising. Chinatown's economic outlook is buoyant, buoyed by a $20 million investment from the New York City Regional Economic Development Council. This funding is earmarked for enhancing public spaces and cultural landmarks like Kimlau Square, and for new initiatives like a culinary arts center, to reinvigorate the area's appeal​​.[4] 
       <br><br>
       In response to changing preferences, Chinatown is expected to diversify its appeal further. New entertainment venues, fashion markets, and drink and dessert shops are being introduced to attract younger visitors. This diversification, supported by the Downtown Revitalization Initiative, is anticipated to inject new life into the community, thereby reinforcing Chinatown's position as an irreplaceable enclave of cultural richness within New York City's tourism landscape. [5]
-    </p>
-  </div>
+  </p>
+</div>
+<!-- end of DIV scroll container class -->
+
   
   <div class="scroll-image" id="scroll-image">
   <img src="imgs/G1.png" alt="Chinatown Tourism">
@@ -213,13 +238,7 @@
 <script src="./script-sec1-tourism.js"></script>
 
 
-<div id="chart" class="chart-container"></div> 
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="./script-sec1-tourism-d3.js"></script>
-<div class="chart-content">
-<p>Tourism in Chinatown, New York, has experienced a dramatic trajectory from 2019 to 2023. Pre-pandemic, visitor numbers were steadily climbing, but the pandemic induced a sharp 50% decline. Remarkably, since 2023, there's been a robust recovery, with current figures exceeding pre-pandemic levels by 20%. This resurgence is attributed to Chinatown's cultural magnetism, particularly its authentic culinary scene, traditional markets, and cultural festivities like the Lunar New Year, which alone attracts over 60,000 visitors. </p> 
-<p1>The chart is created by Renee Rui, using data sourced from the 'Welcome to<br> Chinatown - Chinatown Impact Study (2022)' PDF</p1>
-</div>
+
 
 <!-- Grey rectangle overlay with conclusion -->
 <div class="grey-rectangle">
@@ -229,51 +248,115 @@
 <p1>Citation<br><br>
 1.“New York City Could See 70% Increase in Tourists in 2022: New Study.” ABC7 New York, March 31, 2022. https://abc7ny.com/tourism-nyc-tourists-new-york-city/11694775/#:~:text=During%20the%20pandemic%2C%20tourism%20spending,increase%20in%20tourism%20this%20year. 
 <br>
-2.Jorden, Rashaad. “New York City’s Post-Pandemic Tourism Challenges.” Skift, August 31, 2023. https://skift.com/2023/04/11/new-york-citys-post-pandemic-tourism-challenges/#:~:text=Habtemariam%20reports%20New%20York%20City,New%20York%20City%20%2B%20Conventions. 
-<br>
-3.Ibid.
+2.Jorden, Rashaad. “New York Citys Post-Pandemic Tourism Challenges.” Skift, August 31, 2023. https://skift.com/2023/04/11/new-york-citys-post-pandemic-tourism-challenges/#:~:text=Habtemariam%20reports%20New%20York%20City,New%20York%20City%20%2B%20Conventions. 
 <br>
 4“Governor Hochul Announces 11 Transformational Projects for Chinatown as Part of $20 Million Round 5 Downtown Revitalization Initiative.” Governor Kathy Hochul. Accessed November 12, 2023. https://www.governor.ny.gov/news/governor-hochul-announces-11-transformational-projects-chinatown-part-20-million-round-5. 
 <br>
-5.Ibid.
+
 </p1>
 </div>
-
-
+<!-- END OF SECTION -->
 </section>
+
+
+
+
 <!-----------------------------------------------tourism part----------------------------------------------->
 <!-----------------------------------------------end----------------------------------------------->
 
 
-<!-- SIXTH SECTION Renee's Placement-->
-
-
-<!-- SEVENTH SECTION Image Transition Placement-->
-
-
-
-<!-- EIGTH SECTION Image Transition Placement about infrastrcuture and -->
-
 
 <!-- NINTH Georgina Placement-->
 
+<section class="sec4" id="sec-chinatown-transportation">
+<div class="title-container">
+  <h6>Tracking Transportation of MTA within Chinatown</h6>
+</div>
+
+<div class="buttons">
+<button id="m9" class="button" onclick="startAnimation('m9')">M9</button>
+<button id="m14a" class="button" onclick="startAnimation('m14a')">M14A SBS</button>
+<button id="m15" class="button" onclick="startAnimation('m15')">M15 Local</button>
+<button id="m15s" class="button" onclick="startAnimation('m15s')">M15 SBS</button>
+<button id="m22" class="button" onclick="startAnimation('m22')">M22</button>
+<button id="m55" class="button" onclick="startAnimation('m55')">M55</button>
+<button id="m103" class="button" onclick="startAnimation('m103')">M103</button>
+<button id="all" class="button" onclick="startAnimation('all')">All</button>
+</div>
+
+<div class="black-canvas"></div>
+<!-- Insert Animation Here!  -->
+<div id="animationContainer" class="animation-container">
+<img id="gifAnimation" src="gif/m9.gif" alt="M9 Animation" style="display: none;">
+<img id="gifAnimation" src="gif/m14a.gif" alt="M14a Animation" style="display: none;">
+<img id="gifAnimation" src="gif/m15.gif" alt="M15 Animation" style="display: none;">
+<img id="gifAnimation" src="gif/m15s.gif" alt="M15s Animation" style="display: none;">
+<img id="gifAnimation" src="gif/m22.gif" alt="M22 Animation" style="display: none;">
+<img id="gifAnimation" src="gif/m55.gif" alt="M55 Animation" style="display: none;">
+<img id="gifAnimation" src="gif/m103.gif" alt="M103 Animation" style="display: none;">
+<img id="gifAnimation" src="gif/all.gif" alt="all Animation" style="display: none;">
+</div>
+
+<div class="rectangle" id="rectangle" style="background-color: #000000;">
+<div id="rectangleText" class="rectangle-text"></div>
+</div>
+
+<p id="detailsParagraph" class="details-paragraph typewriter" style="display: none;">
+While evaluating the investment infrastructure in New York City’s Chinatown,
+it is crucial to consider the vast bus network that provides easy access to this lively neighborhood. The schematic representation of many bus lines merging in Chinatown represents a significant inflow of traffic, which includes locals, tourists, and other visitors. This significant quantity of bus usage, with lines such as M15 SBS and M14A SBS displaying exceptionally high figures, highlights Chinatown’s status as a dynamic center for trade and culture. A robust transportation infrastructure not only increases the district’s accessibility but also plays an essential role in strengthening local businesses and cultural sites.
+</p>
+
+<script src="transportation.js"></script>
+</section>
+
+<!-- YINGCHENS PLACE -->
+
+<div id="intro-text">
+  <p>Chinatown's economy is a blend of traditional and modern influences, thriving due to its rich cultural heritage and adaptability. This unique combination, supported by diverse cultural events, contributes significantly to its economic success in New York City. <br><br> Drag the icons to view each event!</p>
+</div>
+<section class="" id="hello-world">
+<div class="container">
+  <div class="button-row">
+      <img src="imgs/lunar.png" class="image-button" id="draggable-button">
+      <div class="text-container">
+          <p>Lunar New Year in Chinatown is a vibrant celebration, <br> featuring colorful decorations, lion dances, and traditional foods <br> symbolizing prosperity. These festivities include cultural workshops <br> and activities, enhancing appreciation for Chinese heritage. <br> The event is inclusive, welcoming people from various <br> backgrounds, fostering community engagement <br> and cultural exchange.</p>
+      </div>
+  </div>
+  <div class="button-row right-aligned">
+      <img src="imgs/night.png" class="image-button" id="draggable-button-left">
+      <div class="text-container-right">
+          <p>The Chinatown Night Market in Manhattan is a lively,<br> monthly summer event at Forsyth Plaza. It blends food, art, <br> and music, showcasing local vendors and traditional folk arts like <br> paper cutting and sugar painting. This open-air festival celebrates <br> Chinatown's culture and community, offering a unique and <br> vibrant experience of communal joy and cultural richness.</p>
+      </div>
+  </div>
+  <div class="button-row">
+      <img src="imgs/taichi.png" class="image-button" id="draggable-button-right">
+      <div class="text-container">
+          <p>The Chinatown Block Party at Mott & Mosco Streets is <br> a vibrant, family-friendly event celebrating the community's <br> musical and cultural heritage. Featuring a DJ and guests, <br> it connects generations through music and dance, continuing a <br> legacy of neighborhood gatherings. This lively event showcases <br>  Chinatown's resilience, diversity, and commitment to <br> preserving its unique cultural identity.</p>
+      </div>
+  </div>
+  <div class="button-row right-aligned">
+      <img src="imgs/art.png" class="image-button" id="draggable-button-left-2">
+      <div class="text-container-right">
+          <p>"Assembly for Chinatown" brings artistic flair to outdoor <br> dining in Chinatown, with local artists and volunteers creating <br> vibrant murals. This initiative enhances the <br> neighborhood's visual appeal, celebrates community <br> spirit, and supports local restaurants <br> through creative expression.</p>
+      </div>
+  </div>
+</div>
+</section>
+
+<script src="js/community.js"></script>
 
 
-<!-- TENTH Ying Chen's Placement-->
 
 
 
-
-
-
-
+<!-- DONT TOUCH! -->
     
 <script type="text/javascript">
   let moon = document.getElementById('moon');
   let stars = document.getElementById('stars');
   let mountains_behind = document.getElementById('mountains_behind');
   let mountains_front = document.getElementById('mountains_front');
-  let trainImage = document.getElementById('text'); // Update to the ID of your train image
+  let trainImage = document.getElementById('text'); 
   let btn = document.getElementById('btn');
   let header = document.querySelector('header');
   
